@@ -1,16 +1,31 @@
-//class R_Sum_of_n_numbers<FaceDetectorOptions> {
-//    // High-accuracy landmark detection and face classification
-//    FaceDetectorOptions highAccuracyOpts =
-//            new FaceDetectorOptions.Builder()
-//                    .setPerformanceMode(FaceDetectorOptions.PERFORMANCE_MODE_ACCURATE)
-//                    .setLandmarkMode(FaceDetectorOptions.LANDMARK_MODE_ALL)
-//                    .setClassificationMode(FaceDetectorOptions.CLASSIFICATION_MODE_ALL)
-//                    .build();
-//
-//    // Real-time contour detection
-//    FaceDetectorOptions realTimeOpts =
-//            new FaceDetectorOptions.Builder()
-//                    .setContourMode(FaceDetectorOptions.CONTOUR_MODE_ALL)
-//                    .build();
-//
-//}
+import java.sql.SQLOutput;
+
+public class R_Sum_of_n_number{
+    // by formula
+    public int sum(int i){
+        return i*(i+1)/2;
+    }
+    // by iteration
+    public int sumi(int j){
+        int total=0;
+        int a=1;
+        while (a<=j) {
+            total += a;
+            a += 1;
+        }
+        return total;
+        }
+        // by recursion
+    public int sumr(int k){
+        if (k==0)
+            return 0;
+        return sumr(k-1)+k;
+    }
+    public static void main(String[] args) {
+        R_Sum_of_n_number r=new R_Sum_of_n_number();
+        System.out.println("sum "+r.sum(5));
+        System.out.println("sum "+r.sumi(5));
+        System.out.println("sum "+r.sumr(5));
+
+    }
+}
